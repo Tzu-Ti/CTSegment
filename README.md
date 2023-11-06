@@ -65,7 +65,7 @@ And download the example (000608355C) from the same drive and put it in "example
 Convert 3D .nii.gz to 2D .npy, including CT and mask.
 ```=shell
 $ cd data
-$ python3 preprocess.py --folder_path /root/VGHTC/CTSegment/example --convert_3d_to_2d_ct
+$ python3 preprocess.py --ct_path /root/VGHTC/CTSegment/000074623G/000074623G_CT.nii.gz --convert_3d_to_2d_ct
 ```
 
 ### Inference
@@ -83,8 +83,8 @@ $ python3 main.py \
     --predict \
     --ckpt_path checkpoints/epoch\=139-step\=91420.ckpt \
     --yaml_path configs/231030.yaml \
-    --patient_path /root/VGHTC/CTSegment/example_preprocessed/000608355C \
-    --ct_path /root/VGHTC/CTSegment/example/000608355C/000608355C_CT.nii.gz \
+    --patient_path /root/VGHTC/CTSegment/000074623G/processed \
+    --ct_path /root/VGHTC/CTSegment/000074623G/000074623G_CT.nii.gz \
     --saving_folder /root/VGHTC/CTSegment/outputs
 ```
 

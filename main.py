@@ -12,7 +12,6 @@ from torch import optim, nn
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
 
-from multiprocessing import cpu_count
 import pytorch_lightning as pl
 from pytorch_lightning import loggers as pl_loggers
 
